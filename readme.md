@@ -1,4 +1,5 @@
 # Superman's Chicken Rescue
+![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/rescue_chicken.gif?raw=true)
 
 ## Description
 
@@ -8,6 +9,10 @@ The program calculates the maximum number of chickens Superman can rescue based 
 Time complexity of O(n)
 
 Space complexity of O(n)
+
+## Algorithm Explanation
+
+
 
 ## Installation
 
