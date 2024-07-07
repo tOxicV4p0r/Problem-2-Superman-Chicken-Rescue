@@ -59,7 +59,7 @@ or
 ```
  `value` -  A string containing the total number of chickens and the length of roof (space-separated)
  // example: '5 10'  - 5 is number chickens and 10 is length of the roof
- `position` - A string containing where the chickens are (space-separated)
+ `position` - A string containing where the chickens are, from lowest to highest. (space-separated)
  // example '2 5 10 12 15' - location of each chicken
 ```
 #### Output
