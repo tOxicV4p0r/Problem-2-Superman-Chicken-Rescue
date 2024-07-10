@@ -1,5 +1,5 @@
 # Superman's Chicken Rescue
-![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/rescue_chicken.gif?raw=true)
+![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step00.gif?raw=true)
 
 ## Description
 `Story`
@@ -18,16 +18,24 @@ The program calculates the maximum number of chickens Superman can rescue based 
 
 **Algorithm**
 1. Calculate the distances between each chicken based on their positions.
-![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step-02.PNG?raw=true)
+![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step01.png?raw=true)
 
-2. Use pointers `L` and `R` to indicate if the edge of the roof has been reached. First, move the `R` pointer and count the number of chickens the roof can cover. The roof length used must include the position of the chicken. In the image, the distance between the first and second chicken is 10, adding the position of the first chicken, making it 11 as the roof length needed to cover two chickens. Store the maximum number of chickens that can be covered each time the pointer changes.
-![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step-03-05.gif?raw=true)
+2. Use pointers `L` and `R` to determine if the distance is within the roof length. The roof length used must include the position of the chicken. In the image, the distance between the first and second chicken is 3, adding the position of the first chicken, making it 4 as the roof length needed to cover two chickens.
+![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step02.png?raw=true)
 
-3. If the `R` pointer reaches the maximum roof length, then move pointer `L` and decrease the count of covered chickens by 1 (since the roof has been moved).
-![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step-06-07.gif?raw=true)
+3. Loop
+   - If the distance between `L` and `R` is **within** the roof length, move pointer `R` and **increase** the `Cover` count by 1. After moving `R`, if it is still within the roof length, compare the `Cover` with `Max Cover` to find the maximum value.
+   ![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step031.gif?raw=true)
 
-4. Repeat steps `2` and `3` until the last chicken position is reached.
-![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step-08.PNG?raw=true)
+   - If the distance between `L` and `R` **exceeds** the roof length, move pointer `L` and **decrease** the `Cover` count by 1. Repeat this step until the distance is **within** the roof length.
+   ![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step032.gif?raw=true)
+
+4. Condition to end the program.
+   - If the roof length is equal to 1, which is the minimum value the roof can cover.
+   - If `Max Cover` equals the roof length, it indicates that the maximum number of chickens the roof can cover has been reached (1 unit per chicken)
+   - If pointer R reaches the last chicken position while still under the roof.
+   - If pointer R exceeds the last chicken position.
+   ![enter image description here](https://github.com/tOxicV4p0r/Problem-2-Superman-Chicken-Rescue/blob/main/resources/images/step04.gif?raw=true)
 
 ## Installation
 

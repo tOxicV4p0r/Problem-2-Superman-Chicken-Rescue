@@ -19,6 +19,10 @@ function rescueChicken(value, position) {
         throw new Error('Invalid argument: number of chickens and roof length must be positive number between 1 and 1,000,000');
     }
 
+    if (roofLength === 1) {
+        return 1;
+    }
+
     // Convert chicken positions in to an array of number
     const chickenPositions = position.split(' ').map(e => Number(e));
     // Validate the number of positions match the number of chickens
@@ -98,6 +102,4 @@ function rescueChicken(value, position) {
     return maxRescued;
 }
 
-module.exports = {
-    rescueChicken,
-}
+module.exports = { rescueChicken }
